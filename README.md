@@ -10,6 +10,7 @@
 
 - html, css を改変して自分の好みの Web ページを作ることができる
 - Windows の場合はコマンドプロンプト、 Macintosh の場合はターミナルといった CUI によるパソコン操作がある程度できる
+- localhost は自分のパソコンの中を示していることを理解できる
 - Web サーバにファイルをアップロードできる
 
 上記を全て満たすレベルの利用者を想定しています。
@@ -30,7 +31,7 @@ Docker (https://www.docker.com/) を事前にお使いのパソコンにイン�
 
 CUI ツール上で PrettifyPict をダウンロードしたフォルダに移動します。
 
-そこで、 `docker compose up -d` と打ってください。
+そこで、 `docker compose up -d` と入力してください。
 
 必要なもののダウンロードに時間はかかりますが、コマンドが無事に実行できたら `http://localhost:4200/` にアクセスしてみてください。
 
@@ -51,6 +52,14 @@ html, css を改変してどうぞ。
 `docker compose run --rm angular ng build`
 
 そうすると、難読化されたサイトのソースコードなどが `/dist` フォルダに出力されます。
+
+### Docker 上での Angular の終了
+
+CUI　ツール上で、 `docker compose down` と入力してください。
+
+このコマンドを打つことで Angular が終了します。
+
+Angular が終了したあとは `http://localhost:4200/` のサイトにはアクセスできなくなりますのでご注意ください。
 
 ### サーバへのアップロード
 
