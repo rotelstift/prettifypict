@@ -46,7 +46,9 @@ CUI ツール上で PrettifyPict をダウンロードしたフォルダに移�
 
 ### PrettifyPict に絵を追加する方法
 
-PrettifyPict に絵を追加するには、以下のようにしてください。
+PrettifyPict に絵を追加するには、以下のように設定を変更してください。
+
+#### 最初の一回だけやればいい設定
 
 `assets` の中に画像を格納するフォルダを作ります。名前はお好きな名前をお選びください。
 
@@ -63,12 +65,14 @@ export const CONFIGURE = {
 }
 ```
 
+#### 絵を追加する度に行う設定
+
 それから、`app/pictures.ts` を書き直してください。
 
 ```ts
 export const PICTURES = [
   {
-    pictureTitle: 'This your first pict',   // 作品のタイトルを書く（日本語可）
+    pictureTitle: '私の初めての作品',          // 作品のタイトルを書く（日本語可）
     picturePath: '',                        // 通常は空欄でいい
     pictureName: 'this_your_first_pict',    // 表示したい作品のファイル名を書く
     pictureExtension: 'jpg',                // 表示したい作品の拡張子を書く
@@ -82,6 +86,7 @@ export const PICTURES = [
   {
     // 作品の数が増えるごとに、{} を増やしてその中に必要な情報を書いていって下さい。
     // また、{} と {} の間にはカンマを忘れないようにして下さい。
+    // また、slug, pictureName, thumbnailNameは他の {} の中の同名の設定と被らないようにして下さい。
     // 以下略
   }
 ]
