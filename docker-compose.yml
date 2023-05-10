@@ -1,0 +1,13 @@
+version: '3'
+services:
+  angular:
+    environment:
+      - NG_CLI_ANALYTICS=false
+    build: .
+    ports:
+      - "4200:4200"
+      - "9876:9876"
+    volumes:
+      - "./:/prettifypict"
+    tty: true
+    command: /bin/bash -c "ng serve --host 0.0.0.0"
