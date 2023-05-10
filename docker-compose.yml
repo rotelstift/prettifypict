@@ -8,6 +8,6 @@ services:
       - "4200:4200"
       - "9876:9876"
     volumes:
-      - "./:/prettifypict"
+      - "./prettifypict:/prettifypict"
     tty: true
     command: /bin/bash -c "ng serve --host 0.0.0.0"
