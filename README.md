@@ -38,9 +38,17 @@ Docker (https://www.docker.com/) を事前にお使いのパソコンにイン�
 
 CUI ツール上で PrettifyPict を解凍したフォルダに移動します。
 
-そこで、 `docker compose up -d` と入力してください。
+### 最初の1回だけ実行すればいいコマンド
 
-必要なもののダウンロードに時間はかかりますが、コマンドが無事に実行できたら `http://localhost:4200/` にアクセスしてみてください。
+まず最初に、`docker compose run --rm angular npm install` を実行します。
+
+必要なもののダウンロードに時間がかかります。
+
+### Angular を実行するためのコマンド
+
+Angularを実行するために `docker compose up -d` と入力してください。
+
+コマンドが無事に実行できたら `http://localhost:4200/` にアクセスしてみてください。
 
 サンプルのギャラリーが表示されていたら成功です。
 
