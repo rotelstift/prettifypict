@@ -36,7 +36,7 @@ Docker (https://www.docker.com/) を事前にお使いのパソコンにイン�
 
 ### Docker 上での Angular の起動
 
-CUI ツール上で PrettifyPict をダウンロードしたフォルダに移動します。
+CUI ツール上で PrettifyPict を解凍したフォルダに移動します。
 
 そこで、 `docker compose up -d` と入力してください。
 
@@ -52,10 +52,6 @@ PrettifyPict に絵を追加するには、以下のように設定を変更し�
 
 `assets` の中に画像を格納するフォルダを作ります。名前はお好きな名前をお選びください。
 
-フォルダを作ったら、その中に画像ファイルをサムネイルとフルサイズの両方を入れてください。サムネイルもフルサイズも英数字と_ （半角アンダースコア）か-（半角ハイフン）のみ名前の部分に書き、画像にあった拡張子をつけたものにして下さい。
-
-サムネイルの推奨サイズは、300 x 300 pixel です。
-
 そして、`app/config.ts` を書き直してください。
 
 ```ts
@@ -67,19 +63,24 @@ export const CONFIGURE = {
 
 #### 絵を追加する度に行う設定
 
+先ほど作ったフォルダの中に、画像ファイルをサムネイルとフルサイズの両方を入れてください。サムネイルもフルサイズも英数字と_ （半角アンダースコア）か-（半角ハイフン）のみ名前の部分に書き、画像にあった拡張子をつけたものにして下さい。
+
+サムネイルの推奨サイズは、300 x 300 pixel です。
+
 それから、`app/pictures.ts` を書き直してください。
 
 ```ts
 export const PICTURES = [
   {
     pictureTitle: '私の初めての作品',          // 作品のタイトルを書く（日本語可）
+    pictureCategorySlug: 'original',        // 作品のカテゴリー識別用の文字列（大文字不可）
     picturePath: '',                        // 通常は空欄でいい
     pictureName: 'this_your_first_pict',    // 表示したい作品のファイル名を書く
     pictureExtension: 'jpg',                // 表示したい作品の拡張子を書く
     thumbnailPath: '',                      // 通常は空欄でいい
     thumbnailName: 'this_your_first_thumb', // サムネイルのファイル名を書く
     thumbnailExtension: 'png',              // サムネイルの拡張子を書く
-    slug: 'first_picture',                  // URLにしたい文字列を書く
+    slug: 'first_picture',                  // URLにしたい文字列を書く（大文字不可）
     description: `ここに作品の説明を書きます。
       必要がなければバッククオートを二つ残して空文字にしておいて下さい。`
   },
@@ -108,7 +109,7 @@ html, css を改変してどうぞ。
 
 `docker compose run --rm angular ng build`
 
-そうすると、難読化されたサイトのソースコードなどが `/dist` フォルダに出力されます。
+そうすると、難読化されたサイトのソースコードなどが `dist` フォルダに出力されます。
 
 ### Docker 上での Angular の終了
 
@@ -120,5 +121,5 @@ Angular が終了したあとは `http://localhost:4200/` のサイトにはア�
 
 ### サーバへのアップロード
 
-あとはご自分で契約された Web サーバに `/dist` フォルダの中身をアップロードしてください。
+あとはご自分で契約された Web サーバに `dist` フォルダの中身をアップロードしてください。
 CGI が使えない Web サーバでも問題ありません。
