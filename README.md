@@ -89,8 +89,6 @@ export const PICTURES = [
     thumbnailName: 'this_your_first_thumb', // サムネイルのファイル名を書く
     thumbnailExtension: 'png',              // サムネイルの拡張子を書く
     slug: 'first_picture',                  // URLにしたい文字列を書く（大文字不可）
-    description: `ここに作品の説明を書きます。
-      必要がなければバッククオートを二つ残して空文字にしておいて下さい。`
   },
   {
     // 作品の数が増えるごとに、{} を増やしてその中に必要な情報を書いていって下さい。
@@ -100,6 +98,8 @@ export const PICTURES = [
   }
 ]
 ```
+
+もし絵に解説を付けるなら、 `assets/texts/` の中に、その絵のslugと同じ名前に `.txt` を付けた名前のテキストファイルを置いて下さい。
 
 これで `http://localhost:4200` にアクセスしてみると、PrettifyPict の絵が自分の絵に差し代わっているはずです。
 
