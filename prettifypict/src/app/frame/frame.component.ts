@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PICTURES } from 'src/assets/settings/pictures';
 
 @Component({
   selector: 'app-frame',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent {
-
+  pictureTitle = PICTURES[0].pictureTitle
 }
