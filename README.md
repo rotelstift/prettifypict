@@ -60,7 +60,7 @@ PrettifyPict に絵を追加するには、以下のように設定を変更し�
 
 `assets` の中に画像を格納するフォルダを作ります。名前はお好きな名前をお選びください。
 
-そして、`assets/settings/config.ts` を書き直してください。
+そして、`src/app/config.ts` を書き直してください。
 
 ```ts
 export const CONFIGURE = {
@@ -75,7 +75,7 @@ export const CONFIGURE = {
 
 サムネイルの推奨サイズは、300 x 300 pixel です。
 
-それから、`assets/settings/pictures.ts` を書き直してください。
+それから、`src/app/pictures.ts` を書き直してください。
 
 ```ts
 export const PICTURES = [

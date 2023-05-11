@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CONFIGURE } from 'src/assets/settings/configure';
-import { PICTURES } from 'src/assets/settings/pictures';
+import { CONFIGURE } from 'src/app/configure';
+import { PICTURES } from 'src/app/pictures';
 
 @Component({
   selector: 'app-picture',

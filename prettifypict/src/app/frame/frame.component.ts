@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PICTURES } from 'src/assets/settings/pictures';
+import { PICTURES } from 'src/app/pictures';
 
 @Component({
   selector: 'app-frame',
